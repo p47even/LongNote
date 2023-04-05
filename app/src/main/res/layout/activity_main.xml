@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <com.p47.longnote.DrawView
+        android:id="@+id/drawView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="-1000dp"
+        />
+
+    <ImageButton
+        android:id="@+id/clearButton"
+        android:text="Clear"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        app:srcCompat="@drawable/clearicon"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:scaleType="centerCrop"
+        android:adjustViewBounds="true"
+        android:background="?attr/selectableItemBackground"
+        android:contentDescription="Clear canvas"
+        android:elevation="1000dp"
+        />
+
+    <ImageButton
+        android:id="@+id/saveButton"
+        android:text="Save"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        app:srcCompat="@drawable/saveicon"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:scaleType="centerCrop"
+        android:adjustViewBounds="true"
+        android:background="?attr/selectableItemBackground"
+        android:contentDescription="Save"
+        android:elevation="1000dp"
+        />
+
+    <ImageButton
+        android:id="@+id/undoButton"
+        android:layout_marginLeft="10dp"
+        android:layout_toEndOf="@+id/clearButton"
+        android:layout_alignBottom="@+id/clearButton"
+        android:onClick="onUndoClick"
+        android:text="Undo"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:scaleType="centerCrop"
+        android:adjustViewBounds="true"
+        android:background="?attr/selectableItemBackground"
+        app:srcCompat="@drawable/undoicon"
+        android:contentDescription="Undo"
+        android:elevation="1000dp"
+        />
+
+    <ImageButton
+        android:id="@+id/redoButton"
+        android:text="Redo"
+        android:onClick="onRedoClick"
+        android:layout_marginLeft="10dp"
+        android:layout_toEndOf="@+id/undoButton"
+        android:layout_alignBottom="@+id/undoButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:scaleType="centerCrop"
+        android:adjustViewBounds="true"
+        android:background="?attr/selectableItemBackground"
+        app:srcCompat="@drawable/redoicon"
+        android:contentDescription="Redo"
+        android:elevation="1000dp"
+        />
+
+    <ImageButton
+        android:id="@+id/eraserButton"
+        android:layout_marginLeft="10dp"
+        android:layout_toEndOf="@+id/redoButton"
+        android:layout_alignBottom="@+id/redoButton"
+        android:text="Eraser"
+        app:srcCompat="@drawable/erasericon"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:scaleType="centerCrop"
+        android:adjustViewBounds="true"
+        android:background="?attr/selectableItemBackground"
+        android:contentDescription="Erase"
+        android:elevation="1000dp"
+        />
+
+
+</RelativeLayout>
